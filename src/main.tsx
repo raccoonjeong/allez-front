@@ -13,10 +13,14 @@ import './assets/styles/tailwind.css';
 
 // JS로 된 컴포넌트도 TS에서 import 가능
 import Admin from './layouts/Admin.tsx';
+import PredictMatches from './layouts/PredictMatches.tsx';
+import ViewMatchArticles from './layouts/ViewMatchArticles.tsx';
+import Matchup from './layouts/Matchup.tsx';
+
 import Auth from './layouts/Auth.jsx';
 import Landing from './views/Landing.jsx';
 import Profile from './views/Profile.jsx';
-import Index from './views/Index';
+import Index from './views/Index.jsx';
 
 // views
 import Dashboard from "@/views/admin/Dashboard";
@@ -31,6 +35,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="/matchup" element={<Matchup />} />
+        <Route path="/predictMatches" element={<PredictMatches />} />
+        <Route path="/viewMatchArticles" element={<ViewMatchArticles />} />
         <Route path="/admin" element={<Admin />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="maps" element={<Maps />} />

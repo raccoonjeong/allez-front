@@ -182,6 +182,76 @@ export default function Sidebar() {
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+              경기 관리
+            </h6>
+            {/* Navigation */}
+
+            <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+              <li className="items-center">
+                <Link
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (location.pathname === "/matchup"
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
+                  to="/matchup"
+                >
+                  <i className={
+                    "fas fa-futbol mr-2 text-sm " +
+                    (location.pathname === "/matchup"
+                      ? "opacity-75"
+                      : "text-blueGray-300")
+                  }></i>{" "}
+                  경기 보기
+                </Link>
+              </li>
+
+              <li className="items-center">
+                <Link
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (location.pathname === "/viewMatchArticles"
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
+                  to="/viewMatchArticles"
+                >
+                  <i className={
+                    "fas fa-newspaper mr-2 text-sm " +
+                    (location.pathname === "/viewMatchArticles"
+                      ? "opacity-75"
+                      : "text-blueGray-300")
+                  }></i>{" "}
+                  경기 기사 보기
+                </Link>
+              </li>
+
+              <li className="items-center">
+                <Link
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (location.pathname === "/predictMatches"
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
+                  to="/predictMatches"
+                >
+                  <i className={
+                    "fas fa-chart-line mr-2 text-sm " +
+                    (location.pathname === "/predictMatches"
+                      ? "opacity-75"
+                      : "text-blueGray-300")
+                  }></i>{" "}
+                  경기 예측하기
+                </Link>
+              </li>
+            </ul>
+
+            {/* Divider */}
+            <hr className="my-4 md:min-w-full" />
+            {/* Heading */}
+            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
               Auth Layout Pages
             </h6>
             {/* Navigation */}

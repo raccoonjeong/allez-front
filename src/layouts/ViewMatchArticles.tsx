@@ -1,24 +1,23 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 
 // components
 import AdminNavbar from "@/components/Navbars/AdminNavbar";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import HeaderStats from "@/components/Headers/HeaderStats";
 import FooterAdmin from "@/components/Footers/FooterAdmin";
-
+import Tables from "@/views/admin/Tables";
 
 // 컴포넌트에 명시적으로 타입 선언 (필수는 아님, 하지만 권장)
-const Admin: React.FC = () => {
+const ViewMatchArticles: React.FC = () => {
   return (
     <>
       <Sidebar />
-      <div className="relative md:ml-64 bg-blueGray-100">
+      <div className="relative md:ml-64 bg-blueGray-100 min-h-screen">
         <AdminNavbar />
         {/* Header */}
         <HeaderStats />
         <div className="px-4 md:px-10 mx-auto w-full -m-24">
-          <Outlet /> {/* 여기서 중첩된 페이지가 렌더링됩니다 */}
+          <Tables />
           <FooterAdmin />
         </div>
       </div>
@@ -26,4 +25,4 @@ const Admin: React.FC = () => {
   );
 };
 
-export default Admin;
+export default ViewMatchArticles;
